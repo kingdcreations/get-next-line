@@ -6,7 +6,7 @@
 /*   By: tmarcon <marvin@le-101.fr>                 +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/22 16:18:48 by tmarcon      #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/29 10:48:10 by tmarcon     ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/10/29 13:30:45 by tmarcon     ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -25,7 +25,7 @@ int main(void)
 	line = NULL;
 	fd = open("fewchar_perline.txt", O_RDONLY);
 
-	while (res)
+	while (res > 0)
 	{
 		res = get_next_line(fd, &line);
 		printf("(%d)(%d) %s\n", i++, res, line);

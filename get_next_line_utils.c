@@ -6,21 +6,21 @@
 /*   By: tmarcon <marvin@le-101.fr>                 +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/22 15:34:31 by tmarcon      #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/29 12:10:03 by tmarcon     ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/10/29 13:47:03 by tmarcon     ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 
-int	ft_strlen(const char *s)
+int		ft_strlen(const char *s)
 {
 	int i;
 
 	i = 0;
 	if (s == NULL)
-		return(0);
-	while(s[i])
+		return (0);
+	while (s[i])
 		i++;
 	return (i);
 }
