@@ -6,7 +6,7 @@
 /*   By: tmarcon <marvin@le-101.fr>                 +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/22 15:34:31 by tmarcon      #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/29 14:24:44 by tmarcon     ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/10/30 10:05:40 by tmarcon     ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -83,6 +83,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	while (s2[j])
 		res[i++] = s2[j++];
 	res[i] = '\0';
+	if (s1)
+		free((void *)s1);
 	return (res);
 }
 
