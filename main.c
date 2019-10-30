@@ -6,24 +6,26 @@
 /*   By: tmarcon <marvin@le-101.fr>                 +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/22 16:18:48 by tmarcon      #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/30 10:48:31 by tmarcon     ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/10/30 11:40:06 by tmarcon     ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
+#include <stdio.h>
+#include <fcntl.h>
 
-int	main(void)
+int	main(int ac, char **av)
 {
 	char	*line;
 	int		fd;
 	int		res;
 	int		i;
 
-	res = 1;
 	i = 1;
+	res = 1;
 	line = NULL;
-	fd = open("test_null_cases.txt", O_RDONLY);
+	fd = (ac == 1) ? 0 : open(av[1], O_RDONLY);
 	while (res > 0)
 	{
 		res = get_next_line(fd, &line);

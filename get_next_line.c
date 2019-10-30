@@ -6,14 +6,14 @@
 /*   By: tmarcon <marvin@le-101.fr>                 +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/22 16:21:11 by tmarcon      #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/30 10:20:17 by tmarcon     ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/10/30 11:04:27 by tmarcon     ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 
-int	output(int ret, char **nextl, char **line, char **buff)
+int	ft_output(int ret, char **nextl, char **line, char **buff)
 {
 	free(*nextl);
 	if (ret != 0)
@@ -51,7 +51,7 @@ int	get_next_line(int fd, char **line)
 		}
 		else
 			ret = 0;
-	if (!(output(ret, &nextl, line, &buff)))
+	if (!(ft_output(ret, &nextl, line, &buff)))
 		return (-1);
 	return (ret);
 }

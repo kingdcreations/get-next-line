@@ -6,7 +6,7 @@
 /*   By: tmarcon <marvin@le-101.fr>                 +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/22 15:34:31 by tmarcon      #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/30 10:05:40 by tmarcon     ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/10/30 11:09:47 by tmarcon     ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -98,7 +98,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		return (NULL);
 	stlen = ft_strlen(s);
 	if (start > stlen)
-		return (strdup(""));
+		return (ft_strdup(""));
 	if (stlen < len)
 		len = stlen;
 	if (!(res = malloc(sizeof(char) * (len + 1))))
