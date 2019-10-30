@@ -6,7 +6,7 @@
 /*   By: tmarcon <marvin@le-101.fr>                 +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/22 16:21:11 by tmarcon      #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/30 11:04:27 by tmarcon     ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/10/30 12:10:38 by tmarcon     ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -37,7 +37,7 @@ int	get_next_line(int fd, char **line)
 	static char	*nextl;
 
 	ret = 1;
-	if (!line || read(fd, NULL, 0) < 0 ||
+	if (!line || BUFFER_SIZE < 1 || read(fd, NULL, 0) < 0 ||
 	!(buff = (char *)malloc(sizeof(char) * (BUFFER_SIZE + 1))))
 		return (-1);
 	if (!(*line = (nextl) ? ft_strdup(nextl + 1) : ft_strdup("")))

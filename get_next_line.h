@@ -6,7 +6,7 @@
 /*   By: tmarcon <marvin@le-101.fr>                 +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/22 16:04:24 by tmarcon      #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/30 11:11:10 by tmarcon     ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/10/30 12:13:09 by tmarcon     ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -16,6 +16,10 @@
 
 # include <stdlib.h>
 # include <unistd.h>
+
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 32
+# endif
 
 int		get_next_line(int fd, char **line);
 int		ft_strlen(const char *s);
